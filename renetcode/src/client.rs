@@ -195,7 +195,7 @@ impl NetcodeClient {
             buffer,
             self.connect_token.protocol_id,
             Some(&self.connect_token.server_to_client_key),
-            Some(&mut self.replay_protection),
+            None,
         ) {
             Ok((_, packet)) => packet,
             Err(e) => {
